@@ -116,19 +116,19 @@ public final class PatientResourceMapper {
         Coding coding = new Coding();
         switch (fields[MARITAL]) {
             case "S":
-                coding.setSystem("http://hl7.org/fhir/v3/MaritalStatus");
+                coding.setSystem("http://terminology.hl7.org/CodeSystem/v3-MaritalStatus");
                 coding.setDisplay("Never Married");
                 coding.setCode(fields[MARITAL]);
                 break;
             case "M":
-                coding.setSystem("http://hl7.org/fhir/v3/MaritalStatus");
+                coding.setSystem("http://terminology.hl7.org/CodeSystem/v3-MaritalStatus");
                 coding.setDisplay("Married");
                 coding.setCode(fields[MARITAL]);
                 break;
             default:
-                coding.setSystem("http://hl7.org/fhir/v3/NullFlavor");
+                coding.setSystem("http://terminology.hl7.org/CodeSystem/v3-NullFlavor");
                 coding.setDisplay("unknown");
-                coding.setCode("");
+                coding.setCode("UNK");
                 break;
         }
 
